@@ -1,0 +1,42 @@
+$primary-color: rgb(255, 230, 0);
+
+.announce {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: $primary-color;
+    padding: 0.5em;
+    gap: 1em;
+
+    h1 {
+        display: flex;
+        font-size: 1.25em;  
+    }
+
+    .shiney-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a {
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    }
+
+    .close {
+        display: flex;
+        position: absolute;
+        background-color: transparent;
+        border: none;
+        right: 5em;
+        transition: all 0.2s;
+        border-radius: 20rem;
+        padding: 0.35rem;
+        &:hover {
+            background-color: rgba(128, 128, 128, 0.452);
+        }
+    }
+}

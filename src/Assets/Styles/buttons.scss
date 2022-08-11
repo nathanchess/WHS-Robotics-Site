@@ -1,0 +1,37 @@
+/* Shiney Button */
+
+.shiney-wrapper {
+    display: flex;  
+    .black {
+        text-decoration: none;
+        border: 0.15em solid;
+        display: flex;
+        transition: all 0.2s ease-in-out;
+        overflow: hidden;
+        position: relative;
+        padding: 0.1em 0.5em;
+        color: black;
+        background-color: white;
+        &:before {
+            content: "";
+            height: 100%;
+            width: 3em;
+            background-color: rgba(150, 150, 150, 0.5);
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: -4.5em;
+            transform: skewX(-45deg) translateX(0);
+            transition: none;
+        }
+        &:hover {
+            padding: 0.1em 0.6em;
+            &:before {
+                transform: skewX(-45deg) translateX(13.5em);
+                transition: all 0.5s ease-in-out;
+            }
+        }
+    }
+}
+
+/* Default rectangle button */

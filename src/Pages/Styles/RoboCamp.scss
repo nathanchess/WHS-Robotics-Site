@@ -1,0 +1,102 @@
+.robocamp-header {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    background-image: 
+    linear-gradient(rgb(0,0,0, 0.5), rgb(0,0,0, 0.5)),
+    url('../../Assets/RoboCamp/HeaderBackground.JPG');
+    background-position: 50% 55%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 20em;
+    max-height: 20em;
+    gap: 1.5em;
+    h1 {
+        color: white;
+        font-size: 4em;
+    }
+    h2 {
+        color: white;
+        font-weight: 400;
+        font-style: italic;
+        font-size: 1.15em;
+    }
+}
+
+.robocamp-about {
+    display: flex;
+    flex-direction: column;
+    padding: 5em 12.5em;
+    .header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.25em;
+    }
+    .horizontal {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    h2 {
+        margin-top: 2em;
+        max-width: 35em;
+        font-weight: 400;
+        font-size: 1.25em;
+    }
+    img {
+        max-width: 30em; 
+        box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        border-radius: 10px;
+        padding: 2em;
+        margin-left: 17.5em;
+    }
+    a {
+        margin-top: 1em;
+        background-color: inherit;
+        text-align: center;
+        text-decoration: none;
+        border: 2px solid black;
+        padding: 0.5em 0em;
+        max-width: 15em;
+        font-weight: bold;
+        color: black;
+        transition: all .25s;
+        &:hover {
+            background-color: rgb(255, 230, 0);
+        }
+    }
+}
+
+.robocamp-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em 10em; 
+    background-color: rgb(255, 230, 0);
+    scroll-margin-top: 3em;
+    padding-bottom: 4em;
+    .horizontal {
+        margin-top: 7em;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20em;
+    }
+}
+
+.robocamp-FAQ {
+    display: flex;
+    flex-direction: column;
+    padding: 5em 12.5em;
+    align-items: center;
+    h1 {
+        margin-bottom: 0.5em;
+    }
+    .desc {
+        font-size: 20px;
+        font-style: italic;
+        font-weight: 400;
+    }
+}

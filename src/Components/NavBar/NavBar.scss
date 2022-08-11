@@ -1,0 +1,64 @@
+$highlighted-background: rgb(255, 255, 255, 0.25);
+$active: rgb(255, 230, 0);
+
+.nav {
+    background-image: linear-gradient(rgb(61, 61, 61), rgb(0, 0, 0));
+    display: flex;
+    align-items: stretch;
+    gap: 1rem;
+    position: sticky;
+    top:0;
+    z-index: 3;
+
+    .logo {
+        display: flex;
+        max-height: 3em;
+        margin: 0.5em 1em;
+    }
+
+    .link-list {
+        display: flex;
+        list-style-type: none;
+        a {
+            display: flex;
+            justify-content: center;
+            padding: 1.4em 1.5em;
+            max-height: 4em;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            .nav-Icon {margin-right: 0.5em;}
+        }
+        .active {background-color: $highlighted-background;}
+        .active > a{color: $active;}
+        .highlight:hover {background-color: $highlighted-background;}
+        .hightlight:hover > a {color: $active;}
+    }
+
+    .contact {
+        position: absolute;
+        top: 15%;
+        right: 3em;
+        padding: 0.5rem 1.5rem;
+        border-radius: 100px;
+        border: white solid;
+        text-transform: uppercase;
+        font-weight: bold;
+        transition: all .2s;
+        text-decoration: none;
+        color: black;
+        background-color: white;
+
+        &:after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+
+        &:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 5px 10px rgba(255, 255, 255, 0.5);
+        }
+    }
+
+}

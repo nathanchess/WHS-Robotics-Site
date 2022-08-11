@@ -1,0 +1,17 @@
+.contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+    .colored {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgb(255, 217, 0);
+        text-transform: uppercase;
+        font-size: 1em;
+    }
+    h1 {
+        
+    }
+}

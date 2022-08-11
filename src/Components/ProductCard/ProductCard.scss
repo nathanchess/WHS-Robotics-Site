@@ -1,0 +1,99 @@
+$circle-size: 8.5em;
+$card-height: 42.5em;
+$card-width: 25em;
+
+.product-card {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: visible;
+    position: relative;
+
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 10px;
+
+    height: $card-height;
+    width: $card-width;
+
+    .circle {
+        position: absolute;
+        border: 2px solid black;
+        display: flex;
+        align-items: center;
+        width: $circle-size; 
+        height: $circle-size;
+        background-color: white;
+        margin-top: -5em;
+        z-index: 2;
+        img {
+            max-width: 100%;
+        }
+    }
+
+    img {
+        border-radius: 10px;
+        width: 100%;
+        z-index: -1;
+    }
+
+    h1 {
+        margin-top: 0.5em;
+        font-size: 24px;
+    }
+
+    p {
+        display: flex;
+        padding: 1em 2em;
+        margin-top: 0.5em;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .learn-more {
+        position: absolute;
+        background-color: rgb(37, 37, 37);
+        border-radius: 5px;
+        padding: 0.5em 4em;
+        color: white;
+        font-weight: bold;
+        font-size: 16px;
+        bottom: 15%;
+        text-transform: uppercase;
+        transition: all .25s;
+        &:hover {
+            color: rgb(255, 230, 0);
+            background-color: rgb(65, 65, 65);
+        }
+    }
+
+    .enroll {
+        position: absolute;
+        margin-top: 2em;
+        border-radius: 5px;
+        background-color: white;
+        text-decoration: none;
+        border: 2px solid black;
+        padding: 0.5em 4.5em;
+        color: black;
+        bottom: 5%;
+        transition: all .5s;
+        font-weight: bold;
+        &:hover {
+            background-color: rgb(255, 230, 0);
+        }
+        &:hover > .icon {
+            opacity: 1;
+        }
+        .icon {
+            position: absolute;
+            float: left;
+            margin-right:1em;
+            opacity: 0;
+            left: 5%;
+            transition: all .5s;
+        }
+    }
+
+}
