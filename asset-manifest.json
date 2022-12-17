@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.21b50a08.css",
-    "main.js": "/static/js/main.f0c6b2d4.js",
+    "main.css": "/static/css/main.778f573e.css",
+    "main.js": "/static/js/main.94e3b9b5.js",
     "static/media/Robot1.png": "/static/media/Robot1.0093cbb37c79d206ce5c.png",
     "static/media/IntroVideo.mp4": "/static/media/IntroVideo.380c6b369f296dee77dc.mp4",
     "static/media/CampABanner.JPG": "/static/media/CampABanner.52b50cbc0cbca25717ec.JPG",
@@ -34,11 +34,11 @@
     "static/media/Disney.png": "/static/media/Disney.05a653f6183fe63beb7e.png",
     "static/media/Discord.png": "/static/media/Discord.667df059ddf407979d68.png",
     "index.html": "/index.html",
-    "main.21b50a08.css.map": "/static/css/main.21b50a08.css.map",
-    "main.f0c6b2d4.js.map": "/static/js/main.f0c6b2d4.js.map"
+    "main.778f573e.css.map": "/static/css/main.778f573e.css.map",
+    "main.94e3b9b5.js.map": "/static/js/main.94e3b9b5.js.map"
   },
   "entrypoints": [
-    "static/css/main.21b50a08.css",
-    "static/js/main.f0c6b2d4.js"
+    "static/css/main.778f573e.css",
+    "static/js/main.94e3b9b5.js"
   ]
 }
