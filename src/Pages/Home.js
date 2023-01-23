@@ -1,5 +1,5 @@
 import React from 'react'
-import CSS from "./Styles/Home.scss"
+import "./Styles/Home.scss"
 import TypeWriter from 'typewriter-effect'
 
 import ImageSlider from '../Components/ImageSlider/ImageSlider'

@@ -1,7 +1,10 @@
 import './App.css';
+import { useEffect, React } from 'react';
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 
 import { Route, Routes} from 'react-router-dom'
-
 import NavBar from './Components/NavBar/index.js'
 import Announcement from './Components/Announcement/index.js';
 import Footer from './Components/Footer/Footer.js';
@@ -20,6 +23,10 @@ function App() {
     text: "Our 2022 RoboCamp signups are now officially open!",
     button_text: "Learn More",
   }
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   return (
     <>
