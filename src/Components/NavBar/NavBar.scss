@@ -2,20 +2,22 @@ $highlighted-background: rgb(255, 255, 255, 0.25);
 $active: rgb(255, 230, 0);
 
 .nav {
-    background-image: linear-gradient(rgb(61, 61, 61), rgb(0, 0, 0));
+    background-color: black;
     display: flex;
     align-items: stretch;
     gap: 1rem;
     position: sticky;
     top:0;
-    z-index: 3;
-
+    z-index: 50;
+    max-width: 100vw;
+    max-height: 100vh;
+    padding-left: 1em;
     .logo {
         display: flex;
         max-height: 3em;
-        margin: 0.5em 1em;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
     }
-
     .link-list {
         display: flex;
         list-style-type: none;
@@ -35,7 +37,6 @@ $active: rgb(255, 230, 0);
         .highlight:hover {background-color: $highlighted-background;}
         .hightlight:hover > a {color: $active;}
     }
-
     .contact {
         position: absolute;
         top: 15%;
@@ -49,7 +50,6 @@ $active: rgb(255, 230, 0);
         text-decoration: none;
         color: black;
         background-color: white;
-
         &:after {
             transform: scaleX(1.4) scaleY(1.6);
             opacity: 0;
@@ -60,5 +60,60 @@ $active: rgb(255, 230, 0);
             box-shadow: 0 5px 10px rgba(255, 255, 255, 0.5);
         }
     }
+    .mobile {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: 3em;
+        top: 1.25em;
+        padding: 4px;
+        border-radius: 20px;
+        background-color: inherit;
+        transition: all .2s;
+        &:hover {
+            background-color: rgba(128, 128, 128, 0.541);
+        }
+    }
+}
 
+.mobile-dropdown {
+    display: none;
+    list-style-type: none;
+    background-color: rgb(0, 0, 0);
+    border-top: 2px solid white;
+    max-height: 0;
+    overflow: hidden;
+    transition: all .5s;
+    position: sticky;
+    top: 64px;
+    z-index: 10;
+    a {
+        padding: 1em;
+        display: flex;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        .nav-Icon {
+            margin-right: 1em;
+        }
+    }
+    .active {background-color: $highlighted-background;}
+    .active > a{color: $active;}
+    .highlight:hover {background-color: $highlighted-background;}
+    .hightlight:hover > a {color: $active;}
+}
+
+@media (max-width: 925px) {
+    .nav {
+        ul {
+            a { display: none !important;}
+        }
+        .contact {display: none;}
+        .mobile {display: flex;}
+    }
+    
+    .mobile-dropdown {
+        display: block;
+    }
 }

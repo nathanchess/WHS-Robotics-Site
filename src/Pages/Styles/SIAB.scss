@@ -1,0 +1,182 @@
+.SIAB-header {
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+    justify-content: center;
+    background-image: 
+    linear-gradient(rgb(0,0,0, 0.5), rgb(0,0,0, 0.5)),
+    url('../../Assets/SIAB/Header.png');
+    background-position: 50% 55%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 20em;
+    max-height: 20em;
+    gap: 1.5em;
+    padding: 5vw 0em;
+    h1 {
+        color: white;
+        font-size: 4em;
+    }
+    h2 {
+        color: white;
+        font-weight: 400;
+        font-style: italic;
+        font-size: 1.15em;
+    }
+}
+
+.SIAB-about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    gap: 2em;
+    h2 {
+        text-align: center;
+        font-weight: 400;
+        font-size: 1.2em;
+    }
+    .underline {
+        text-decoration-line: underline;
+    }
+    iframe {
+        border: 2px solid black;
+        border-radius: 10px;
+    }
+    a {
+        margin-top: 1em;
+        background-color: inherit;
+        text-align: center;
+        text-decoration: none;
+        border: 2px solid black;
+        padding: 0.5em;
+        max-width: 15em;
+        font-weight: bold;
+        color: black;
+        transition: all .25s;
+        &:hover {
+            background-color: rgb(255, 230, 0);
+        }
+    }
+}
+
+.SIAB-participate {
+    background-color: rgb(255, 230, 0);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    gap: 2em;
+    h2 {
+        text-align: center;
+        font-weight: 400;
+        font-size: 1.2em;
+        a {
+            text-decoration: underline;
+
+        }
+    }
+    .QRCode {
+        max-height: 40vh;
+    }
+    .row {
+        display: flex;
+        flex-direction: row;
+        gap: 3em;
+    }
+    .ImageSlider {
+        .image {
+            width: 800px;
+        }
+    }
+    .column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3em;
+        .QRCode {
+            max-width: 30vh;
+        }
+    }
+    .mobile {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    .SIAB-participate {
+        .mobile {
+            display: flex;
+        }
+        .web {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .SIAB-about {
+        iframe {
+            width: 90vw
+        }
+    }
+    .SIAB-participate {
+        .mobile {
+            .ImageSlider {
+                .image {
+                    width: 80vw;
+                    height: 40vw;
+                    min-height: 20vw;
+                }
+                svg {
+                    width: 4vw;
+                    height: 4vw
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    
+    .SIAB-about  {
+        padding-left: 25px;
+        padding-right: 25px;
+        h2 {
+            font-size: 1em;
+        }
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .SIAB-participate {
+        .mobile {
+            .ImageSlider {
+                .image {
+                    width: 80vw;
+                    height: 50vw;
+                }
+                svg {
+                    width: 4vw;
+                    height: 4vw
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .SIAB-participate {
+        .mobile {
+            .ImageSlider {
+                display: none;
+            }
+        }
+    }
+}

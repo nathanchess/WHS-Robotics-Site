@@ -14,7 +14,8 @@ const SponsorCard = (props) => {
           <div className='back'>
             <h1>{props.title}</h1>
             <p>{props.desc}</p>
-            <a href={props.site} target="_blank" rel="noreferrer"><FaPaperPlane class='redirect-icon'/>Visit their website!</a>
+            {props.role ? <p className='role'>Role: {props.role}</p> : null}
+            {props.site ? <a href={props.site} target="_blank" rel="noreferrer"><FaPaperPlane class='redirect-icon'/>Visit their website!</a> : null}
           </div>
         </div>
       </div>

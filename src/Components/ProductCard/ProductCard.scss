@@ -1,5 +1,5 @@
-$circle-size: 8.5em;
-$card-height: 42.5em;
+$circle-size: 7em;
+$card-height: 70vh;
 $card-width: 25em;
 
 .product-card {
@@ -14,7 +14,7 @@ $card-width: 25em;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     border-radius: 10px;
 
-    height: $card-height;
+    padding-bottom: 3em;
     width: $card-width;
 
     .circle {
@@ -52,14 +52,13 @@ $card-width: 25em;
     }
 
     .learn-more {
-        position: absolute;
+        margin-top: 3vh;
         background-color: rgb(37, 37, 37);
         border-radius: 5px;
         padding: 0.5em 4em;
         color: white;
         font-weight: bold;
         font-size: 16px;
-        bottom: 15%;
         text-transform: uppercase;
         transition: all .25s;
         &:hover {
@@ -69,15 +68,13 @@ $card-width: 25em;
     }
 
     .enroll {
-        position: absolute;
         margin-top: 2em;
         border-radius: 5px;
         background-color: white;
         text-decoration: none;
         border: 2px solid black;
-        padding: 0.5em 4.5em;
+        padding: 0.5em 4em;
         color: black;
-        bottom: 5%;
         transition: all .5s;
         font-weight: bold;
         &:hover {
@@ -87,13 +84,44 @@ $card-width: 25em;
             opacity: 1;
         }
         .icon {
-            position: absolute;
-            float: left;
-            margin-right:1em;
-            opacity: 0;
-            left: 5%;
-            transition: all .5s;
+        
+            
         }
     }
 
+}
+
+@media only screen and (max-width: 1400px) {
+    .product-card {
+        p {
+            font-size: 15px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .product-card {
+        h1 {
+            font-size: 20px;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .product-card {
+        p {
+            font-size: 13px;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .product-card {
+        .learn-more  {
+            padding: 0.5em 10vw;
+        }
+        .enroll  {
+            padding: 0.5em 10vw;
+        }
+    }
 }

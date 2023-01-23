@@ -15,8 +15,8 @@ const ProductCard = (props) => {
       </div>
       <h1>{props.name}</h1>
       <p>{props.desc}</p>
-      <button className='learn-more'>Learn More</button>
-      <a href="/robocamp-enrollment" className='enroll'><FiClipboard className='icon' size="1.25em"/>Signup Now</a>
+      <button className='learn-more' onClick={props.clickHandler}>Learn More</button>
+      <a href="/robocamp-enrollment" className='enroll'>Signup Now</a>
     </div>
   )
 }

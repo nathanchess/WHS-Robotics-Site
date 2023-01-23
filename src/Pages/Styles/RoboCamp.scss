@@ -1,7 +1,7 @@
 .robocamp-header {
     display: flex;
     flex-flow: column wrap;
-    align-items: center;
+    text-align: center;
     justify-content: center;
     background-image: 
     linear-gradient(rgb(0,0,0, 0.5), rgb(0,0,0, 0.5)),
@@ -21,22 +21,38 @@
         font-weight: 400;
         font-style: italic;
         font-size: 1.15em;
+        text-align: center;
     }
 }
 
 .robocamp-about {
     display: flex;
     flex-direction: column;
-    padding: 5em 12.5em;
+    padding: 7.5vh 10vw;
     .header {
-        display: flex;
-        align-items: center;
+        text-align: center;
         margin-bottom: 0.25em;
     }
     .horizontal {
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
+        gap: 5em;
+    }
+    .mobile {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        h2 {
+            max-width: 80vw;
+        }
+        .ImageSlider {
+            margin-top: 3em;
+            img {
+                height: 50vw;
+                width: 70vw;
+            }
+        }
     }
     h2 {
         margin-top: 2em;
@@ -44,26 +60,26 @@
         font-weight: 400;
         font-size: 1.25em;
     }
-    img {
-        max-width: 30em; 
-        box-shadow: 0 0 15px rgba(0,0,0,0.2);
-        border-radius: 10px;
-        padding: 2em;
-        margin-left: 17.5em;
-    }
     a {
-        margin-top: 1em;
+        margin-top: 2em;
         background-color: inherit;
         text-align: center;
         text-decoration: none;
         border: 2px solid black;
         padding: 0.5em 0em;
-        max-width: 15em;
         font-weight: bold;
         color: black;
         transition: all .25s;
         &:hover {
             background-color: rgb(255, 230, 0);
+        }
+        width: 15em;
+    }
+    .ImageSlider {
+        margin-top: 3em;
+        img {
+            height: 20vw;
+            width: 30vw;
         }
     }
 }
@@ -71,8 +87,8 @@
 .robocamp-info {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 2em 10em; 
+    text-align: center;
+    padding: 5vh 20vw; 
     background-color: rgb(255, 230, 0);
     scroll-margin-top: 3em;
     padding-bottom: 4em;
@@ -81,8 +97,7 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-        flex-wrap: wrap;
-        gap: 20em;
+        gap: 10em;
     }
 }
 
@@ -91,6 +106,7 @@
     flex-direction: column;
     padding: 5em 12.5em;
     align-items: center;
+    text-align: center;
     h1 {
         margin-bottom: 0.5em;
     }
@@ -98,5 +114,147 @@
         font-size: 20px;
         font-style: italic;
         font-weight: 400;
+        margin-bottom: 2em;
+    }
+    .accordion {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgb(245, 245, 245);
+        border: 1px solid rgb(197, 197, 197);
+        width: 85vw;
+        font-size: 1.25em;
+        color: rgb(75, 75, 75);
+        text-align: left;
+        padding: 0.5em 2em;
+        transition: 0.5s;
+        svg {
+            pointer-events: none;
+        }
+    }
+
+    .active, .accordion:hover {
+        background-color: rgb(226, 226, 226);
+    }
+
+    .panel {
+        text-align: left;
+        max-height: 0;
+        margin-top: 1em;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        margin-bottom: 1em;
+    }
+}
+
+@media (max-width: 1450px) {
+    .robocamp-about {
+        padding: 7.5vh 5vw;
+    }
+}
+
+@media (max-width: 1300px) {
+    .robocamp-about {
+        .horizontal {
+            display: none;
+        }
+        .mobile {
+            display: flex;
+        }
+        a {
+            margin: auto;
+            width: 70vw;
+            margin-top: 5vh;
+        }
+    }
+    .robocamp-info {
+        .horizontal {
+            flex-wrap: wrap;
+        }
+    }
+}
+
+@media (max-width:  875px) {
+    .robocamp-FAQ {
+        h2 {
+            width: 75vw;
+        }
+        button {
+            width: 75vw;
+        }
+        p {
+            width: 75vw;
+        }
+    }
+}
+
+
+@media (max-width: 800px) {
+    .robocamp-about {
+        padding: 5vh 5vw;
+        .mobile {
+            h2 {
+                font-size: 1em;
+            }
+            .ImageSlider {
+                svg {
+                    height: 3vh;
+                    width: 3vh;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:  600px) {
+    .robocamp-info {
+       .header {
+            font-size: 1.5em;
+       }
+    }
+    .robocamp-FAQ {
+        padding: 3vh 5vw;
+    }
+}
+
+@media (max-width:  600px) {
+    .robocamp-info {
+        padding: 5vh 10vw; 
+    }
+    
+}
+
+
+@media (max-width:  400px) {
+    .robocamp-header {
+        h1 {
+            font-size: 3em
+        }
+        h2 {
+            font-size: 1em;
+        }
+    }
+    .robocamp-about {
+        .mobile  {
+            h2 {
+                font-size: 0.9em;
+            }
+        }
+    }
+    .robocamp-info {
+       .header {
+            font-size: 1em;
+       }
+    }
+    .robocamp-FAQ {
+        .desc  {
+            font-size: 16px;
+        }
+        .accordion {
+            font-size: 14px;
+        }
+        .panel {
+            font-size: 12px;
+        }
     }
 }

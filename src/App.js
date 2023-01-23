@@ -4,6 +4,7 @@ import { Route, Routes} from 'react-router-dom'
 
 import NavBar from './Components/NavBar/index.js'
 import Announcement from './Components/Announcement/index.js';
+import Footer from './Components/Footer/Footer.js';
 
 import Home from './Pages/Home'
 import FTC from './Pages/FTC'
@@ -11,6 +12,7 @@ import RoboCamp from './Pages/RoboCamp'
 import SIAB from './Pages/SIAB'
 import Sponsors from './Pages/Sponsors'
 import Contact from './Pages/Contact'
+import ScrollToTop from './Components/ScrollToTop';
 
 function App() {
 
@@ -21,6 +23,7 @@ function App() {
 
   return (
     <>
+      <ScrollToTop />
       <Announcement {...announcementProps} />
       <NavBar />
       <div className='container' >
@@ -33,6 +36,7 @@ function App() {
           <Route path="/Contact" element={<Contact />} />
         </Routes>
       </div>
+      <Footer />
     </>
   );
 }

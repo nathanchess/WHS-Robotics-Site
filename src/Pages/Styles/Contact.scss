@@ -1,17 +1,88 @@
 .contact-container {
     display: flex;
-    align-items: center;
     justify-content: center;
-    padding: 2em;
-    .colored {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgb(255, 208, 0), rgb(255, 235, 57));
+    .content {
         display: flex;
+        flex-direction: column;
+        padding: 2em 1em;
         align-items: center;
-        justify-content: center;
-        color: rgb(255, 217, 0);
-        text-transform: uppercase;
-        font-size: 1em;
-    }
-    h1 {
-        
+        .title {
+            margin-bottom: 2vh;
+        }
+        h2 {
+            margin-bottom: 4vh;
+            font-weight: 300;
+            font-style: italic;
+            font-size: 20px;
+            text-align: center;
+        }
+        .form {
+            h3 {
+                text-align: center;
+                font-weight: bold;
+                margin-bottom: 3vh;
+            }
+            display: inline-block;
+            background-color: white;
+            padding: 2em 3em;
+            width: 550px;
+            height: 600px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-radius: 5px;
+            position: relative;
+            hr {
+                margin: 0;
+                visibility: hidden;
+                height: 2em;
+            }
+            label {
+                font-weight: bold;
+                color: rgb(58, 58, 58)
+            }
+            input[type=text], input[type=email] {
+                position: absolute;
+                font-size: 16px;
+                padding: .25em 0;
+                right: 2em;
+                width: 60%;
+                background-color: rgb(231, 231, 231);
+                border: 1px solid rgb(202, 202, 202);
+            }
+
+            select {
+                position: absolute;
+                right: 2em;
+                font-size: 16px;
+                width: 60%;
+            }
+
+            textarea {
+                width: 100%;
+                height: 10em;
+                font-size: 16px;
+                resize: none;
+            }
+
+            input[type=submit] {
+                margin-top: 1.5em;
+                padding: 0.5em 0;
+                width: 100%;
+                font-size: 20px;
+                border-radius: 3px;
+                color: black;
+                border: 1px solid black;
+                cursor: pointer;
+                background-color: white;
+                transition: all .5s;
+                &:hover {
+                    background-color: black;
+                    color: rgb(255, 208, 0);
+                }
+            }
+        }
     }
 }
